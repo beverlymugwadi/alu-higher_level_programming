@@ -1,12 +1,8 @@
 #!/usr/bin/pythonk3
-def square_matrix(matrix):
-    result_matrix = []
-
-    for row in matrix:
-        squared_row = [num ** 2 for num in row]
-        result_matrix.append(squared_row)
-
-    return result_matrix
-
-result = square_matrix(input_matrix)
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+result = [row[i]**2 for row in matrix for i in range(3)]
 print(result)
