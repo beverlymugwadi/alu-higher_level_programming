@@ -1,7 +1,12 @@
 #!/usr/bin/python3
-"""Classs that defines a square"""
-class Square:
-    """initialization"""
-    def __init__(self,size)
-    self.size=size
+""" class:Square"""
 
+
+class Square:
+
+    """ class init """
+
+
+    def __init__(self,size):
+        '''initialize the rectangle size'''
+        self.__size = size
