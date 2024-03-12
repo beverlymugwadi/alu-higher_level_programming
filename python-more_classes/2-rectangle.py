@@ -1,41 +1,45 @@
 #!/usr/bin/python3
-"""class Rectangle that defines a rectangle"""
+"""Write a class Rectangle that defines a rectangle"""
+
+
 class Rectangle:
-    """initialization"""
-    def __init__(self,width=0,height=0):
-        self.width=width
-        self.height=height
+    """Write a class Rectangle that defines a rectangle"""
 
-        @property
-        def width(self):
-            return self._width
+    def __init__(self, width=0, height=0):
+        self.width = width
+        self.height = height
 
-        @width.setter
-        def width(self, value):
-            if not isinstance(int,value):
-                raise TypeError("width must be an integer")
-            elif value<0:
-                raise ValueError("width must be >= 0")
-            else:
-                self._width=value
+    @property
+    def width(self):
+        return self.__width
 
+    @width.setter
+    def width(self, value):
+        if type(value) is not int:
+            raise TypeError("width must be an integer")
+        elif value < 0:
+            raise ValueError("width must be >= 0")
+        else:
+            self.__width = value
 
-        @property
-        def height(self):
-            return self._height
+    @property
+    def height(self):
+        return self.__height
 
-        @height.setter
-        def height(self, value):
-            if not isinstance(int,value):
-                raise TypeError("height must be an integer")
-            elif value<0:
-                raise ValueError("height must be >= 0")
-            else:
-                self._height=value
+    @height.setter
+    def height(self, value):
+        if type(value) is not int:
+            raise TypeError("height must be an integer")
+        elif value < 0:
+            raise ValueError("height must be >= 0")
+        else:
+            self.__height = value
 
-        def area(self):
-            return self.width*self.height
+    def area(self):
+        return self.width*self.height
 
-        def perimeter(self):
-            return self.widht+self.width+self.height+self.height
-
+    def perimeter(self):
+        if self.width == 0 or self.height == 0:
+            return 0
+        else:
+            return (self.width*2) + (self.
