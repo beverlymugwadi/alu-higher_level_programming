@@ -1,9 +1,12 @@
 #!/usr/bin/python3
 """Defining class"""
 
+
 class Rectangle:
 
     """Initialization"""
+
+
     def __init__(self,width=0,height=0):
         self._width=width
         self._height=height
