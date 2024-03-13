@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """Defining class"""
-
-
 class Rectangle:
+
 
     """Initialization"""
 
@@ -64,4 +63,5 @@ class Rectangle:
         return "Rectangle (" + str(self._width) + "," + str(self._height) + ")"
 
     def __del__(self):
+        """Print a message for every deletion of a Rectangle."""
         print("Bye rectangle...")
