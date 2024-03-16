@@ -11,11 +11,11 @@ class BaseGeometry:
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """Validate if the value is an integer greater that 0"""
-        if not isinstance(value, int):
-            raise TypeError("<name> must be an integer")
+        """validates that value is an integer greater than 0"""
+        if type(value) is not int:
+            raise TypeError("{:s} must be an integer".format(name))
         if value <= 0:
-            raise ValueError("<name> must be greater than 0")
+            raise ValueError("{:s} must be greater than 0".format(name))
 
 
 class Rectangle(BaseGeometry):
@@ -27,10 +27,10 @@ class Rectangle(BaseGeometry):
         self.integer_validator("height", height)
         self.__height = height
 
-    """Implememnting area"""
     def area(self):
-        return self._width * self.__height
+        """returns the area of the rectangle"""
+        return self.__width * self.__height
 
-    """The presentation should be string"""
     def __str__(self):
+        """informal string representation of the rectangle"""
         return "[Rectangle] {:d}/{:d}".format(self.__width, self.__height)
