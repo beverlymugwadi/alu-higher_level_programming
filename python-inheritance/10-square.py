@@ -1,19 +1,19 @@
 #!/usr/bin/python3
-"""A class that inherit from rectangle"""
+"""
+Contains the class BaseGeometry and subclass Rectangle
+"""
+
 Rectangle = __import__('9-rectangle').Rectangle
 
 
-
 class Square(Rectangle):
-
-
+    """A representation of a square"""
     def __init__(self, size):
-        """isinstantiation of a square"""
+        """instantiation of the square"""
+        self.integer_validator("size", size)
+        self.__size = size
         super().__init__(size, size)
-        size.integer_validator("size", size)
-        self._size=size
-
 
     def area(self):
-        """Return the are of a square"""
-        return self._size**2
+        """"returns the area of the square"""
+        return self.__size ** 2
