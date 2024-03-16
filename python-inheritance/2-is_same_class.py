@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""A Boolean Function"""
-
-
+"""A fucntion that returns a boolean"""
 def is_same_class(obj, a_class):
-    """Check if object is instance of a class."""
-    return True if type(obj) == a_class else False
+    if obj == a_class:
+        return True
+    else:
+        return False
