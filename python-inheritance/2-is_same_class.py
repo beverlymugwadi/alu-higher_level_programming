@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """A fucntion that returns a boolean"""
+
+
+
 def is_same_class(obj, a_class):
-    if obj == a_class:
-        return True
-    else:
-        return False
+    """Check if object is instance of a class"""
+    return True if obj==a_class else False
