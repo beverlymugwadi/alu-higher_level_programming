@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-"""An empyy class"""
+"""Defining BaseGeometry Class."""
 
 
 class BaseGeometry:
+    """represent a geometry."""
+
     def area(self):
-        """Raise an exception"""
+        """raise an exception message."""
         raise Exception("area() is not implemented")
