@@ -1,7 +1,13 @@
---Create database, Create table with constraints
---Creating database
-CREATE DATABASE IF NOT EXIST hbtn_0d_usa;
---Switch to database
+-- Create database if it doesn't exist
+CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
+
+-- Switch to the database
 USE hbtn_0d_usa;
---Creating table
-CREATE TABLE IF NOT EXIST cities (id INT UNIQUE AUTO_INCREMENT NOT NULL PRIMARY KEY, state_id INT NOT NULL, FOREIGN KEY(state_id) REFERENCES states(id), name VARCHAR(256) NOT NULL);
+
+-- Create table with constraints
+CREATE TABLE IF NOT EXISTS cities (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    state_id INT NOT NULL,
+    FOREIGN KEY(state_id) REFERENCES states(id),
+    name VARCHAR(256) NOT NULL
+);
