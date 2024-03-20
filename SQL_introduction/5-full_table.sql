@@ -1,2 +1,2 @@
---Full discription of the table
+-- describe table
 SHOW CREATE TABLE first_table
